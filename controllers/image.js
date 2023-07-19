@@ -1,10 +1,10 @@
 import { ClarifaiStub, grpc } from "clarifai-nodejs-grpc";
 const stub = ClarifaiStub.grpc();
 const { PAT, USER_ID, APP_ID, MODEL_ID } = {
-    PAT: "b07bb08255044e51922c458556258bb4",
-    USER_ID: "mereluo7",
-    APP_ID: "my-first-application",
-    MODEL_ID: "face-detection",
+    PAT: process.env.PAT,
+    USER_ID: process.env.USER_ID,
+    APP_ID: process.env.APP_ID,
+    MODEL_ID: process.env.MODEL_ID,
 };
 
 const metadata = new grpc.Metadata();
