@@ -8,17 +8,6 @@ import { handleSignin } from "./controllers/signin.js";
 import { handleImage, handleAPI } from "./controllers/image.js";
 import { handleProfile } from "./controllers/profile.js";
 
-// const db = knex({
-//     client: "pg",
-//     connection: {
-//         host: "127.0.0.1",
-//         port: 5432,
-//         user: "meredith",
-//         password: "",
-//         database: "smart-brain",
-//     },
-// });
-
 const db = knex({
     client: "pg",
     connection: {
