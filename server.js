@@ -2,6 +2,7 @@ import express, { json, urlencoded } from "express";
 import bcrypt from "bcrypt";
 import cors from "cors";
 import knex from "knex";
+import "dotenv/config.js";
 
 import { handleRegister } from "./controllers/register.js";
 import { handleSignin } from "./controllers/signin.js";
@@ -56,8 +57,8 @@ app.put("/image", (req, res) => {
 app.post("/imageurl", (req, res) => {
     handleAPI(req, res);
 });
-app.listen(3000, () => {
-    console.log("app is running on port 3000");
+app.listen(8080, () => {
+    console.log("app is running on port 8080");
 });
 
 /*

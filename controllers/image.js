@@ -9,7 +9,6 @@ const { PAT, USER_ID, APP_ID, MODEL_ID } = {
 
 const metadata = new grpc.Metadata();
 metadata.set("authorization", "Key " + PAT);
-
 export function handleAPI(req, res) {
     stub.PostModelOutputs(
         {
@@ -36,10 +35,11 @@ export function handleAPI(req, res) {
 }
 
 export function handleImage(req, res, db) {
-    const { id } = req.body;
+    const { id, numFaces } = req.body;
+    console.log(numFaces);
     db("users")
         .where("id", "=", id)
-        .increment("entries", 1)
+        .increment("entries", numFaces)
         .returning("entries")
         .then((entries) => {
             res.json(entries[0].entries);

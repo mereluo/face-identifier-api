@@ -10,7 +10,7 @@ To run the Face Identifier API locally, please follow these steps:
 2. Install the required dependencies: `npm install`.
 3. Set up the PostgreSQL database and configure the connection in the application.
 4. Start the server: `nodemon server.js`.
-5. The API will now be running on `http://localhost:3000`.
+5. The API will now be running on `http://localhost:8080`.
 
 ### Environment Variables
 
